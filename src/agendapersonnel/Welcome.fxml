@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="agendapersonnel.WelcomeController"
+           prefWidth="600" prefHeight="520"
+           styleClass="welcome-root">
+    <VBox alignment="CENTER" spacing="0" styleClass="welcome-bg">
+
+        <!-- TOP DECO BAR -->
+        <HBox alignment="CENTER" spacing="16" styleClass="deco-bar">
+            <Label text="🌸" styleClass="deco-emoji"/>
+            <Label text="✨" styleClass="deco-emoji"/>
+            <Label text="🐰" styleClass="deco-emoji"/>
+            <Label text="✨" styleClass="deco-emoji"/>
+            <Label text="🌸" styleClass="deco-emoji"/>
+        </HBox>
+
+        <!-- MAIN CARD -->
+        <VBox alignment="CENTER" spacing="18" styleClass="welcome-card">
+
+            <!-- CUTE IMAGE -->
+            <HBox alignment="CENTER">
+                <ImageView fx:id="welcomeImage"
+                           fitWidth="130" fitHeight="130"
+                           preserveRatio="true"
+                           styleClass="welcome-img"/>
+            </HBox>
+
+            <!-- APP TITLE -->
+            <VBox alignment="CENTER" spacing="4">
+                <Label text="Mon Agenda Personnel"
+                       styleClass="welcome-title"/>
+                <Label text="✨ Organise ta vie avec style ✨"
+                       styleClass="welcome-tagline"/>
+            </VBox>
+
+            <!-- MOTIVATIONAL QUOTE -->
+            <VBox alignment="CENTER" styleClass="quote-box">
+                <Label fx:id="quoteLabel"
+                       wrapText="true"
+                       textAlignment="CENTER"
+                       styleClass="quote-text"/>
+            </VBox>
+
+            <!-- THEME SELECTION -->
+            <VBox alignment="CENTER" spacing="8">
+                <Label text="Choisis ton thème :" styleClass="section-label"/>
+                <HBox alignment="CENTER" spacing="16">
+                    <VBox alignment="CENTER" spacing="4"
+                          styleClass="theme-card theme-pink"
+                          fx:id="pinkCard"
+                          onMouseClicked="#selectGirly">
+                        <Label text="🌸🐰🌹" styleClass="theme-icon"/>
+                        <Label text="Girly Rose" styleClass="theme-name"/>
+                        <Label text="Roses et Lapins" styleClass="theme-desc"/>
+                    </VBox>
+                    <VBox alignment="CENTER" spacing="4"
+                          styleClass="theme-card theme-blue"
+                          fx:id="blueCard"
+                          onMouseClicked="#selectBoys">
+                        <Label text="🚀⭐🌙" styleClass="theme-icon"/>
+                        <Label text="Boys Bleu" styleClass="theme-name"/>
+                        <Label text="Etoiles et Fusees" styleClass="theme-desc"/>
+                    </VBox>
+                </HBox>
+            </VBox>
+
+            <!-- PRENOM -->
+            <VBox alignment="CENTER" spacing="5">
+                <Label text="Ton prenom (optionnel) :" styleClass="section-label"/>
+                <TextField fx:id="prenomField"
+                           promptText="Ex: Sarra ou Ahmed..."
+                           styleClass="prenom-field"
+                           maxWidth="220"/>
+            </VBox>
+
+            <!-- START BUTTON -->
+            <Button fx:id="startBtn"
+                    text="Commencer"
+                    styleClass="start-btn"
+                    onAction="#handleStart"
+                    defaultButton="true"/>
+
+            <!-- VERSION -->
+            <Label text="Agenda Personnel v1.0 - ISG Tunis 2026"
+                   styleClass="version-label"/>
+
+        </VBox>
+
+        <!-- BOTTOM DECO -->
+        <HBox alignment="CENTER" spacing="12" styleClass="deco-bar-bottom">
+            <Label text="🌹" styleClass="deco-emoji-sm"/>
+            <Label text="🐻" styleClass="deco-emoji-sm"/>
+            <Label text="💕" styleClass="deco-emoji-sm"/>
+            <Label text="🐻" styleClass="deco-emoji-sm"/>
+            <Label text="🌹" styleClass="deco-emoji-sm"/>
+        </HBox>
+
+    </VBox>
+</StackPane>

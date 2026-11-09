@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="AgendaPersonnel" default="default" basedir=".">
+    <description>AgendaPersonnel</description>
+
+    <!-- Importer build-impl SANS jfx-impl -->
+    <import file="nbproject/build-impl.xml"/>
+
+    <!-- Copier ressources -->
+    <target name="-post-compile">
+        <echo message=">>> Copie FXML et CSS..."/>
+        <copy todir="${build.classes.dir}">
+            <fileset dir="${src.dir}">
+                <include name="**/*.fxml"/>
+                <include name="**/*.css"/>
+                <include name="**/*.png"/>
+                <include name="**/*.jpg"/>
+            </fileset>
+        </copy>
+        <echo message=">>> OK !"/>
+    </target>
+
+    <!-- Override run pour bypasser jfx -->
+    <target name="run" depends="compile">
+        <java fork="true"
+              classname="agendapersonnel.Main"
+              classpath="${run.classpath}">
+            <jvmarg value="--module-path"/>
+            <jvmarg value="C:\AgendaPersonnel\lib"/>
+            <jvmarg value="--add-modules"/>
+            <jvmarg value="javafx.controls,javafx.fxml"/>
+            <jvmarg value="--enable-native-access=javafx.graphics"/>
+        </java>
+    </target>
+
+</project>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="agendapersonnel.MainController"
+            prefWidth="900" prefHeight="620"
+            styleClass="main-root">
+
+    <!-- ══════════════════ TOP BAR ══════════════════ -->
+    <top>
+        <HBox styleClass="topbar" alignment="CENTER_LEFT" spacing="12">
+            <Label fx:id="topDeco" text="🌸" styleClass="top-deco"/>
+            <Label text="Mon Agenda Personnel" styleClass="top-title"/>
+            <Label fx:id="greetLabel" text="" styleClass="top-greet"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <!-- Theme toggle -->
+            <Button fx:id="themeGirlyBtn" text="🌸 Girly"
+                    styleClass="theme-toggle-btn active-theme"
+                    onAction="#switchGirly"/>
+            <Button fx:id="themeBoysBtn"  text="🚀 Boys"
+                    styleClass="theme-toggle-btn"
+                    onAction="#switchBoys"/>
+        </HBox>
+    </top>
+
+    <!-- ══════════════════ LEFT SIDEBAR ══════════════════ -->
+    <left>
+        <VBox styleClass="sidebar-left" spacing="4" prefWidth="190">
+            <padding><Insets top="14" right="10" bottom="14" left="10"/></padding>
+
+            <Button text="📅  Calendrier"   styleClass="nav-btn nav-active"
+                    maxWidth="Infinity" onAction="#showCalendar"/>
+            <Button text="📋  Événements"   styleClass="nav-btn"
+                    maxWidth="Infinity" onAction="#showEvents"/>
+            <Button text="🔍  Rechercher"   styleClass="nav-btn"
+                    maxWidth="Infinity" onAction="#showSearch"/>
+            <Button text="⭐  Importants"   styleClass="nav-btn"
+                    maxWidth="Infinity" onAction="#showImportant"/>
+            <Button text="📊  Statistiques" styleClass="nav-btn"
+                    maxWidth="Infinity" onAction="#showStats"/>
+
+            <Region VBox.vgrow="ALWAYS"/>
+
+            <Separator styleClass="side-sep"/>
+            <Button text="⚙️  Paramètres"  styleClass="nav-btn"
+                    maxWidth="Infinity" onAction="#showSettings"/>
+        </VBox>
+    </left>
+
+    <!-- ══════════════════ CENTER (main content) ══════════════════ -->
+    <center>
+        <!-- This StackPane holds swappable sub-views -->
+        <StackPane fx:id="contentArea" styleClass="content-area">
+
+            <!-- DEFAULT: CALENDAR + EVENT LIST -->
+            <VBox fx:id="calendarPane" spacing="10" styleClass="calendar-view">
+                <padding><Insets top="14" right="14" bottom="14" left="14"/></padding>
+
+                <!-- Month navigation -->
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Button text="◀" styleClass="nav-month-btn" onAction="#prevMonth"/>
+                    <Label fx:id="monthYearLabel" text="Mai 2026" styleClass="month-label"
+                           HBox.hgrow="ALWAYS"/>
+                    <Button text="▶" styleClass="nav-month-btn" onAction="#nextMonth"/>
+                    <Button text="Aujourd'hui" styleClass="today-btn" onAction="#goToday"/>
+                </HBox>
+
+                <!-- Calendar grid -->
+                <GridPane fx:id="calendarGrid" styleClass="cal-grid"
+                          hgap="4" vgap="4">
+                    <!-- Day headers: filled by controller -->
+                </GridPane>
+
+                <!-- Events of selected day -->
+                <Label fx:id="selectedDayLabel" text="Événements du jour"
+                       styleClass="section-title"/>
+
+                <ScrollPane fitToWidth="true" styleClass="events-scroll" VBox.vgrow="ALWAYS">
+                    <VBox fx:id="eventListBox" spacing="8" styleClass="event-list">
+                        <padding><Insets top="4" right="4" bottom="4" left="4"/></padding>
+                    </VBox>
+                </ScrollPane>
+            </VBox>
+
+        </StackPane>
+    </center>
+
+    <!-- ══════════════════ RIGHT SIDEBAR ══════════════════ -->
+    <right>
+        <VBox styleClass="sidebar-right" prefWidth="200" spacing="8">
+            <padding><Insets top="14" right="10" bottom="14" left="10"/></padding>
+
+            <Label text="Prochains événements" styleClass="sidebar-title"/>
+
+            <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS" styleClass="up-scroll">
+                <VBox fx:id="upcomingBox" spacing="6" styleClass="upcoming-list">
+                    <padding><Insets top="2" right="2" bottom="2" left="2"/></padding>
+                </VBox>
+            </ScrollPane>
+
+            <Separator styleClass="side-sep"/>
+
+            <Button text="+ Ajouter un événement"
+                    styleClass="add-btn" maxWidth="Infinity"
+                    onAction="#openAddEvent"/>
+        </VBox>
+    </right>
+
+    <!-- ══════════════════ BOTTOM STATUS BAR ══════════════════ -->
+    <bottom>
+        <HBox styleClass="statusbar" alignment="CENTER_LEFT" spacing="10">
+            <padding><Insets top="5" right="12" bottom="5" left="12"/></padding>
+            <Label fx:id="statusLabel" text="Bienvenue dans votre agenda ✨"
+                   styleClass="status-text"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="dateTimeLabel" text="" styleClass="status-date"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

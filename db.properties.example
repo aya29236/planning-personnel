@@ -1,0 +1,5 @@
+# Copy this file to "db.properties" (same folder you launch the app from)
+# and put your own Oracle settings. db.properties is git-ignored.
+db.url=jdbc:oracle:thin:@localhost:1521:XE
+db.user=your_user
+db.password=your_password

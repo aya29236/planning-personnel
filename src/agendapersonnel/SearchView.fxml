@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="agendapersonnel.SearchController"
+      styleClass="main-root"
+      spacing="0"
+      prefWidth="600" prefHeight="500">
+
+    <!-- HEADER -->
+    <HBox styleClass="topbar" alignment="CENTER_LEFT" spacing="10">
+        <padding><Insets top="0" right="16" bottom="0" left="16"/></padding>
+        <Label text="🔍" styleClass="top-deco"/>
+        <Label text="Rechercher des événements" styleClass="top-title"/>
+    </HBox>
+
+    <!-- FILTERS ZONE -->
+    <VBox spacing="10" styleClass="sidebar-left">
+        <padding><Insets top="14" right="16" bottom="14" left="16"/></padding>
+
+        <!-- Barre de recherche -->
+        <HBox spacing="8" alignment="CENTER_LEFT">
+            <TextField fx:id="searchField"
+                       promptText="🔍  Rechercher par titre..."
+                       styleClass="prenom-field"
+                       HBox.hgrow="ALWAYS"/>
+            <Button fx:id="searchBtn"
+                    text="Chercher"
+                    styleClass="add-btn"
+                    prefWidth="90"
+                    onAction="#handleSearch"/>
+            <Button fx:id="clearBtn"
+                    text="Effacer"
+                    styleClass="nav-btn"
+                    onAction="#handleClear"/>
+        </HBox>
+
+        <!-- Filtres ligne 1 -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Type :" styleClass="section-label" minWidth="60"/>
+            <ComboBox fx:id="typeFilter"
+                      styleClass="prenom-field"
+                      prefWidth="160"/>
+            <Label text="Priorité :" styleClass="section-label" minWidth="60"/>
+            <ComboBox fx:id="priorityFilter"
+                      styleClass="prenom-field"
+                      prefWidth="160"/>
+        </HBox>
+
+        <!-- Filtres ligne 2 -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Du :" styleClass="section-label" minWidth="60"/>
+            <DatePicker fx:id="dateFrom"
+                        styleClass="prenom-field"
+                        prefWidth="150"
+                        onAction="#handleSearch"/>
+            <Label text="Au :" styleClass="section-label" minWidth="30"/>
+            <DatePicker fx:id="dateTo"
+                        styleClass="prenom-field"
+                        prefWidth="150"
+                        onAction="#handleSearch"/>
+            <ComboBox fx:id="sortCombo"
+                      styleClass="prenom-field"
+                      prefWidth="160"
+                      onAction="#handleSearch"/>
+        </HBox>
+
+    </VBox>
+
+    <!-- RÉSULTATS COUNT -->
+    <HBox styleClass="statusbar" alignment="CENTER_LEFT">
+        <padding><Insets top="6" right="16" bottom="6" left="16"/></padding>
+        <Label fx:id="resultsCount"
+               text="Recherche en cours..."
+               styleClass="status-text"/>
+    </HBox>
+
+    <!-- RÉSULTATS LISTE -->
+    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS"
+                styleClass="events-scroll">
+        <VBox fx:id="resultsBox" spacing="8" styleClass="event-list">
+            <padding><Insets top="10" right="12" bottom="10" left="12"/></padding>
+        </VBox>
+    </ScrollPane>
+
+</VBox>

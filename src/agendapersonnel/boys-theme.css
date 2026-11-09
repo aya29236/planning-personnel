@@ -1,0 +1,173 @@
+/* ═══════════════════════════════════════════════
+   BOYS BLEU THEME 🚀⭐🌙
+   Agenda Personnel — ISG Tunis 2026
+═══════════════════════════════════════════════ */
+
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -clr-primary:    #185fa5;
+    -clr-primary-dk: #0c447c;
+    -clr-bg:         #eef6fd;
+    -clr-bg2:        #e6f1fb;
+    -clr-border:     #85b7eb;
+    -clr-text:       #042c53;
+    -clr-text2:      #185fa5;
+}
+
+/* ── WELCOME ─────────────────────────────────── */
+.welcome-root    { -fx-background-color: #1a3a6b; }
+.welcome-card {
+    -fx-background-color: #eef6fd;
+    -fx-background-radius: 20;
+    -fx-border-color: #85b7eb;
+    -fx-border-radius: 20;
+    -fx-border-width: 1.5;
+    -fx-padding: 22 28 18 28;
+    -fx-effect: dropshadow(gaussian, rgba(10,40,90,0.35), 24, 0, 0, 6);
+    -fx-max-width: 400;
+}
+.deco-emoji    { -fx-font-size: 22px; }
+.deco-emoji-sm { -fx-font-size: 16px; }
+.welcome-title  { -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #042c53; }
+.welcome-tagline{ -fx-font-size: 13px; -fx-text-fill: #185fa5; }
+.quote-box {
+    -fx-background-color: #e6f1fb;
+    -fx-background-radius: 12;
+    -fx-border-color: #85b7eb;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+    -fx-padding: 10 16 10 16;
+    -fx-max-width: 340;
+}
+.quote-text    { -fx-font-size: 12px; -fx-text-fill: #0c447c; -fx-font-style: italic; }
+.section-label { -fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #0c447c; }
+.theme-pink    { -fx-background-color: #fbeaf0; -fx-border-color: #f4c0d1; }
+.theme-blue    { -fx-background-color: #e6f1fb; -fx-border-color: #185fa5; }
+.theme-name    { -fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #042c53; }
+.theme-desc    { -fx-font-size: 10px; -fx-text-fill: #185fa5; }
+.prenom-field {
+    -fx-background-color: #fff;
+    -fx-border-color: #85b7eb;
+    -fx-border-radius: 8; -fx-background-radius: 8;
+    -fx-border-width: 1;
+    -fx-padding: 6 10 6 10;
+    -fx-font-size: 13px;
+}
+.prenom-field:focused { -fx-border-color: #185fa5; }
+.start-btn {
+    -fx-background-color: #185fa5;
+    -fx-text-fill: white;
+    -fx-font-size: 14px; -fx-font-weight: bold;
+    -fx-background-radius: 12;
+    -fx-padding: 10 40 10 40; -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(24,95,165,0.4), 10, 0, 0, 3);
+}
+.start-btn:hover { -fx-background-color: #0c447c; }
+.version-label   { -fx-font-size: 10px; -fx-text-fill: #185fa5; -fx-opacity: 0.6; }
+
+/* ── MAIN WINDOW ─────────────────────────────── */
+.main-root { -fx-background-color: #eef6fd; }
+.topbar {
+    -fx-background-color: #185fa5;
+    -fx-padding: 0 16 0 16; -fx-pref-height: 52;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 8, 0, 0, 2);
+}
+.top-title { -fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: white; }
+.top-greet { -fx-font-size: 13px; -fx-text-fill: rgba(255,255,255,0.85); }
+.theme-toggle-btn {
+    -fx-background-color: rgba(255,255,255,0.2);
+    -fx-text-fill: white;
+    -fx-border-color: rgba(255,255,255,0.4);
+    -fx-border-radius: 20; -fx-background-radius: 20;
+    -fx-font-size: 12px; -fx-padding: 4 12 4 12; -fx-cursor: hand;
+}
+.theme-toggle-btn:hover { -fx-background-color: rgba(255,255,255,0.35); }
+.active-theme { -fx-background-color: rgba(255,255,255,0.45); -fx-font-weight: bold; }
+
+.sidebar-left {
+    -fx-background-color: #e6f1fb;
+    -fx-border-color: transparent #85b7eb transparent transparent;
+    -fx-border-width: 0 1 0 0;
+}
+.nav-btn {
+    -fx-background-color: transparent; -fx-text-fill: #0c447c;
+    -fx-font-size: 13px; -fx-alignment: CENTER_LEFT;
+    -fx-padding: 8 12 8 12; -fx-background-radius: 10; -fx-cursor: hand;
+}
+.nav-btn:hover { -fx-background-color: #b5d4f4; }
+.nav-active    { -fx-background-color: #185fa5; -fx-text-fill: white; -fx-font-weight: bold; }
+.side-sep      { -fx-background-color: #85b7eb; }
+
+.content-area  { -fx-background-color: #eef6fd; }
+.month-label   { -fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #042c53; }
+.nav-month-btn {
+    -fx-background-color: #e6f1fb; -fx-border-color: #85b7eb;
+    -fx-border-radius: 8; -fx-background-radius: 8; -fx-text-fill: #0c447c; -fx-cursor: hand;
+}
+.today-btn {
+    -fx-background-color: #e6f1fb; -fx-border-color: #185fa5;
+    -fx-border-radius: 8; -fx-background-radius: 8;
+    -fx-text-fill: #185fa5; -fx-font-size: 12px; -fx-cursor: hand;
+}
+.cal-day-header { -fx-font-size: 11px; -fx-font-weight: bold; -fx-text-fill: #185fa5; -fx-alignment: CENTER; }
+.cal-day-btn {
+    -fx-background-color: #fff; -fx-border-color: #85b7eb;
+    -fx-border-radius: 8; -fx-background-radius: 8; -fx-border-width: 0.5;
+    -fx-text-fill: #0c447c; -fx-font-size: 12px; -fx-cursor: hand;
+    -fx-min-width: 36; -fx-min-height: 36;
+}
+.cal-day-btn:hover { -fx-background-color: #b5d4f4; }
+.cal-day-today     { -fx-background-color: #185fa5; -fx-text-fill: white; -fx-font-weight: bold; }
+.cal-day-has-event { -fx-border-color: #185fa5; -fx-border-width: 1.5; }
+.cal-day-selected  { -fx-background-color: #e6f1fb; -fx-border-color: #185fa5; -fx-border-width: 2; }
+
+.section-title { -fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #185fa5; }
+.events-scroll, .up-scroll {
+    -fx-background-color: transparent; -fx-background: transparent; -fx-border-color: transparent;
+}
+.event-card {
+    -fx-background-color: white; -fx-border-color: #85b7eb;
+    -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-width: 1;
+    -fx-padding: 8 10 8 10;
+    -fx-effect: dropshadow(gaussian, rgba(24,95,165,0.08), 6, 0, 0, 2);
+}
+.event-card:hover { -fx-border-color: #185fa5; }
+.event-title  { -fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #042c53; }
+.event-meta   { -fx-font-size: 11px; -fx-text-fill: #185fa5; }
+
+.icon-btn {
+    -fx-background-color: transparent; -fx-border-color: #85b7eb;
+    -fx-border-radius: 6; -fx-background-radius: 6; -fx-border-width: 0.5;
+    -fx-font-size: 12px; -fx-cursor: hand; -fx-min-width: 28; -fx-min-height: 28;
+}
+.icon-btn:hover { -fx-background-color: #e6f1fb; }
+
+.sidebar-right {
+    -fx-background-color: #e6f1fb;
+    -fx-border-color: transparent transparent transparent #85b7eb;
+    -fx-border-width: 0 0 0 1;
+}
+.sidebar-title  { -fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #0c447c; }
+.upcoming-card  { -fx-background-color: white; -fx-border-color: #85b7eb; -fx-border-radius: 8; -fx-background-radius: 8; -fx-border-width: 0.5; -fx-padding: 6 8 6 8; }
+.upcoming-date  { -fx-font-size: 10px; -fx-text-fill: #185fa5; -fx-font-weight: bold; }
+.upcoming-name  { -fx-font-size: 12px; -fx-text-fill: #042c53; }
+.add-btn {
+    -fx-background-color: #185fa5; -fx-text-fill: white;
+    -fx-font-size: 13px; -fx-font-weight: bold;
+    -fx-background-radius: 10; -fx-padding: 9 0 9 0; -fx-cursor: hand;
+}
+.add-btn:hover  { -fx-background-color: #0c447c; }
+.statusbar {
+    -fx-background-color: #e6f1fb;
+    -fx-border-color: #85b7eb transparent transparent transparent;
+    -fx-border-width: 1 0 0 0;
+}
+.status-text { -fx-font-size: 12px; -fx-text-fill: #185fa5; }
+.status-date { -fx-font-size: 11px; -fx-text-fill: #185fa5; -fx-opacity: 0.7; }
+/* Champ d'erreur dans EventForm */
+.error-label {
+    -fx-text-fill: #e24b4a;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 4 0 0 0;
+}
