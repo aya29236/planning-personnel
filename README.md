@@ -6,7 +6,7 @@ Developed as a university project for *Programmation Orientée Objet Avancée* a
 
 **Author:**  Aya Fayachi
 
-## ✨ Features
+##  Features
 
 - **Event management:** Create, edit, delete, and view events.
 - **Monthly calendar:** Navigate between months and select days to view events.
@@ -20,7 +20,7 @@ Developed as a university project for *Programmation Orientée Objet Avancée* a
 - **Live clock:** Display the current time in the application.
 - **Automatic database setup:** Create the required database table, sequence, and trigger on first launch.
 
-## 🛠️ Technologies
+##  Technologies
 
 | Component             | Technology             |
 | --------------------- | ---------------------- |
@@ -32,7 +32,7 @@ Developed as a university project for *Programmation Orientée Objet Avancée* a
 | IDE                   | Apache NetBeans        |
 | Build system          | Apache Ant             |
 
-## 📋 Requirements
+##  Requirements
 
 Before running the application, install:
 
@@ -42,7 +42,7 @@ Before running the application, install:
 - **Oracle JDBC Driver** (`ojdbc11.jar`)
 - **Apache NetBeans** (with Ant support)
 
-## 🚀 Installation & Setup
+##  Installation & Setup
 
 ### 1. Get the project
 
@@ -121,7 +121,7 @@ ant run
 
 Make sure to launch the application from the project directory so it can find its configuration files.
 
-## 📁 Project Structure
+##  Project Structure
 
 ```text
 AgendaPersonnel/
@@ -145,7 +145,7 @@ AgendaPersonnel/
 └── db.properties.example
 ```
 
-## 🗄️ Database Structure
+##  Database Structure
 
 The application uses an Oracle table named `events`.
 
@@ -162,7 +162,7 @@ The application uses an Oracle table named `events`.
 
 The application also uses an Oracle sequence (`events_seq`) and trigger (`events_bir`) to generate event IDs automatically.
 
-## 🔮 Future Improvements
+##  Future Improvements
 
 The following features are planned for future versions:
 
@@ -175,7 +175,7 @@ The following features are planned for future versions:
 - **Flexible installation:** Remove the hardcoded project path to support different installation directories.
 - **Modern build system:** Migrate from Ant to Maven or Gradle.
 
-## 📄 License
+##  License
 
 This project is developed for educational purposes at ISG Tunis.
 
